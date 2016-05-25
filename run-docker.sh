@@ -1,6 +1,6 @@
 #!/bin/bash
 CONTAINER_ID=$(docker run -P --name officeContainer-$(date +%s) --cap-add=SYS_ADMIN --device=/dev/fuse -d -P \
-  -e SPICE_PASSWD=abc123 \
+  -e SPICE_PASSWD=password \
   -e AMQP_BUS_HOST=localhost \
   -e LANG=da_DK \
   -e COMMAND_TO_EXECUTE="['node', '/root/start.js', 'writer']" -e SPICE_RES=1024x768 -e EYEOS_UNIX_USER=user open365-office)
